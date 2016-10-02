@@ -1,4 +1,6 @@
-package br.com.fernandonkgw.designpatterns;
+package br.com.fernandonkgw.designpatterns.strategy;
+
+import br.com.fernandonkgw.designpatterns.Orcamento;
 
 public class ICMS implements Imposto {
 
