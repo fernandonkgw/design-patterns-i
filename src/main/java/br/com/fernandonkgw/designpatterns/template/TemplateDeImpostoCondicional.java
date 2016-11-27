@@ -1,17 +1,17 @@
 package br.com.fernandonkgw.designpatterns.template;
 
 import br.com.fernandonkgw.designpatterns.Orcamento;
-import br.com.fernandonkgw.designpatterns.strategy.Imposto;
+import br.com.fernandonkgw.designpatterns.decorator.Imposto;
 
-public abstract class TemplateDeImpostoCondicional implements Imposto {
+public abstract class TemplateDeImpostoCondicional extends Imposto {
 
 	@Override
 	public final double calcula(Orcamento orcamento) {
 		
 		if (deveUsarMaximaTaxacao(orcamento)) {
-			return maximaTaxacao(orcamento);
+			return maximaTaxacao(orcamento) + super.calculoDoOutroImposto(orcamento);
 		} else {
-			return minimaTaxacao(orcamento);
+			return minimaTaxacao(orcamento) + super.calculoDoOutroImposto(orcamento);
 		}
 	}
 

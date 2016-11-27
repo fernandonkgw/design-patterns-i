@@ -6,9 +6,9 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.Test;
 
 import br.com.fernandonkgw.designpatterns.Orcamento;
+import br.com.fernandonkgw.designpatterns.decorator.ISS;
 import br.com.fernandonkgw.designpatterns.strategy.CalculadorDeImpostos;
 import br.com.fernandonkgw.designpatterns.strategy.ICMS;
-import br.com.fernandonkgw.designpatterns.strategy.ISS;
 
 public class CalculadorDeImpostosTest {
 
