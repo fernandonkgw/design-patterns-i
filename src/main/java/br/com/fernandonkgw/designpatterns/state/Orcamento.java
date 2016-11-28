@@ -22,6 +22,10 @@ public class Orcamento {
 		return valor;
 	}
 	
+	public EstadoDeUmOrcamento getEstadoAtual() {
+		return estadoAtual;
+	}
+	
 	public void adiciona(Item item) {
 		itens.add(item);
 	}
