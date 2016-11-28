@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import br.com.fernandonkgw.designpatterns.Item;
-import br.com.fernandonkgw.designpatterns.Orcamento;
+import br.com.fernandonkgw.designpatterns.state.Orcamento;
 
 public class IKCVTest {
 

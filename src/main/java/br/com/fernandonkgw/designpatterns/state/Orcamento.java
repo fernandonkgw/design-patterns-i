@@ -1,17 +1,21 @@
-package br.com.fernandonkgw.designpatterns;
+package br.com.fernandonkgw.designpatterns.state;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import br.com.fernandonkgw.designpatterns.Item;
+
 public class Orcamento {
 
-	private final double valor;
+	private double valor;
 	private final List<Item> itens;
-
+	private EstadoDeUmOrcamento estadoAtual;
+	
 	public Orcamento(double valor) {
 		this.valor = valor;
 		this.itens = new ArrayList<>();
+		this.estadoAtual = new EmAprovacao();
 	}
 	
 	public double getValor() {
@@ -32,5 +36,25 @@ public class Orcamento {
 				return true;
 		}
 		return false;
+	}
+	
+	void aplicaDesconto(double desconto) {
+		valor -= valor * desconto;
+	}
+	
+	public void aplicaDescontoExtra() {
+		estadoAtual.aplicaDescontoExtra(this);
+	}
+	
+	void setEstadoAtual(EstadoDeUmOrcamento estadoAtual) {
+		this.estadoAtual = estadoAtual;
+	}
+	
+	public void aprova() {
+		estadoAtual.aprova(this);
+	}
+	
+	public void reprova() {
+		estadoAtual.reprova(this);
 	}
 }

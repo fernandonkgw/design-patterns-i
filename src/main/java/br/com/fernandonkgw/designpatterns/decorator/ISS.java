@@ -1,6 +1,6 @@
 package br.com.fernandonkgw.designpatterns.decorator;
 
-import br.com.fernandonkgw.designpatterns.Orcamento;
+import br.com.fernandonkgw.designpatterns.state.Orcamento;
 
 public class ISS extends Imposto {
 

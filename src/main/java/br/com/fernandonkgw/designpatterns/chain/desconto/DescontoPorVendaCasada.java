@@ -1,6 +1,6 @@
 package br.com.fernandonkgw.designpatterns.chain.desconto;
 
-import br.com.fernandonkgw.designpatterns.Orcamento;
+import br.com.fernandonkgw.designpatterns.state.Orcamento;
 
 public class DescontoPorVendaCasada implements Desconto {
 

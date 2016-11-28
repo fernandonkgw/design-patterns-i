@@ -6,12 +6,12 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.Test;
 
 import br.com.fernandonkgw.designpatterns.Item;
-import br.com.fernandonkgw.designpatterns.Orcamento;
 import br.com.fernandonkgw.designpatterns.chain.desconto.Desconto;
 import br.com.fernandonkgw.designpatterns.chain.desconto.DescontoPorCincoItens;
 import br.com.fernandonkgw.designpatterns.chain.desconto.DescontoPorMaisDeQuinhentosReais;
 import br.com.fernandonkgw.designpatterns.chain.desconto.DescontoPorVendaCasada;
 import br.com.fernandonkgw.designpatterns.chain.desconto.SemDesconto;
+import br.com.fernandonkgw.designpatterns.state.Orcamento;
 
 public class DescontoPorVendaCasadaTest {
 

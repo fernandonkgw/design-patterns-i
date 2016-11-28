@@ -1,7 +1,7 @@
 package br.com.fernandonkgw.designpatterns.template;
 
-import br.com.fernandonkgw.designpatterns.Orcamento;
 import br.com.fernandonkgw.designpatterns.decorator.Imposto;
+import br.com.fernandonkgw.designpatterns.state.Orcamento;
 
 public abstract class TemplateDeImpostoCondicional extends Imposto {
 

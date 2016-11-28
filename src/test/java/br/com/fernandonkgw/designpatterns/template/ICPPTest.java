@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.fernandonkgw.designpatterns.Orcamento;
+import br.com.fernandonkgw.designpatterns.state.Orcamento;
 import br.com.fernandonkgw.designpatterns.template.ICPP;
 import br.com.fernandonkgw.designpatterns.template.TemplateDeImpostoCondicional;
 
