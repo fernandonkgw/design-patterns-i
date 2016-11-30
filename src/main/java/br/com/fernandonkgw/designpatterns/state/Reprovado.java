@@ -4,25 +4,22 @@ class Reprovado implements EstadoDeUmOrcamento {
 
 	@Override
 	public void aplicaDescontoExtra(Orcamento orcamento) {
-		throw new RuntimeException("Orçamentos reprovados não recebem desconto extra!");
+		throw new IllegalStateException("Orçamentos reprovados não recebem desconto extra!");
 	}
 
 	@Override
 	public void aprova(Orcamento orcamento) {
-		// TODO Auto-generated method stub
-		
+		throw new IllegalStateException("Orçamento está no estado de reprovação, não pode aprovar agora!");
 	}
 
 	@Override
 	public void reprova(Orcamento orcamento) {
-		// TODO Auto-generated method stub
-		
+		throw new IllegalStateException("Já está reprovado!");
 	}
 
 	@Override
 	public void finaliza(Orcamento orcamento) {
-		// TODO Auto-generated method stub
-		
+		orcamento.setEstadoAtual(new Finalizado());
 	}
 
 }

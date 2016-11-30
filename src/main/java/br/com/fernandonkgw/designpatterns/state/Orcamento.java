@@ -8,7 +8,7 @@ import br.com.fernandonkgw.designpatterns.Item;
 
 public class Orcamento {
 
-	private double valor;
+	protected double valor;
 	private final List<Item> itens;
 	private EstadoDeUmOrcamento estadoAtual;
 	
@@ -40,10 +40,6 @@ public class Orcamento {
 				return true;
 		}
 		return false;
-	}
-	
-	void aplicaDesconto(double desconto) {
-		valor -= valor * desconto;
 	}
 	
 	public void aplicaDescontoExtra() {

@@ -4,11 +4,20 @@ import java.util.Calendar;
 
 public class Conta {
 
-	private double saldo;
+	protected double saldo;
 	private Calendar dataAbertura;
+	protected EstadoDaConta estado;
+	
+	public Conta() {
+		estado = new Positivo();
+	}
+
+	public void saca(double valor) {
+		estado.saca(this, valor);
+	}
 	
 	public void deposita(double valor) {
-		this.saldo += valor;
+		estado.deposita(this, valor);
 	}
 	
 	public double getSaldo() {
